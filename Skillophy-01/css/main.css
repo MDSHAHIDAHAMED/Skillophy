@@ -1,0 +1,1537 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+  color: #999aa6;
+}
+
+
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  font-weight: normal;
+  color: #1F2235;
+  margin: 0px;
+  padding: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto", sans-serif;
+}
+
+p {
+  color: #FC5A57;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 42px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 12px;
+}
+
+a {
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  font-weight: normal;
+  color: inherit;
+  font-family: inherit;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a.active {
+  text-decoration: none;
+}
+
+input {
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+input[type=text],
+input[type=password],
+input[type=date],
+input[type=url],
+input[type=search],
+input[type=text],
+input[type=email],
+input[type=tel],
+input[type=time],
+.form-control,
+textarea,
+textarea.form-control {
+  height: 35px;
+  border-radius: 0.25rem;
+  box-shadow: none;
+  border: none;
+  color: #999aa6;
+}
+
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=date]:focus,
+input[type=url]:focus,
+input[type=search]:focus,
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=tel]:focus,
+input[type=time]:focus,
+.form-control:focus,
+textarea:focus,
+textarea.form-control:focus {
+  box-shadow: none;
+  outline: none;
+  background: transparent;
+}
+
+.input-form input {
+  padding: 10px;
+  height: 44px;
+}
+
+.input-form .portstar-btn {
+  padding: 10px 30px;
+}
+
+textarea,
+textarea.form-control {
+  height: auto;
+  padding: 10px;
+  min-height: 146px;
+  width: 100%;
+}
+
+/* ================================================== Variable Part start =================================================== */
+:root {
+  --Hind_Siliguri: 'Hind Siliguri', sans-serif;
+  --color_primary: #FFFFFF;
+  --color_secondary: #1E1E1E;
+  --color_brand: #FC5A57;
+}
+
+/* -------------------------------------------------- Variable Part end ----------------------------------------------------- */
+
+
+
+.header-nav {
+  background-color: var(--color_brand);
+  height: 96px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.logo {
+  margin-top: 12px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  position: relative;
+  margin: 0 1rem;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: var(--Hind_Siliguri);
+  color: var(--color_primary);
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--color_primary);
+  padding: 0.5rem 0;
+  display: block;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #222;
+}
+
+.navbar .menu_button {
+  width: 149px;
+  height: 35px;
+  border-radius: 7px;
+  background: var(--color_primary);
+  text-align: center;
+  line-height: 38px;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: var(--Hind_Siliguri);
+  color: var(--color_brand);
+  border: 1px solid var(--color_primary);
+}
+
+@keyframes swip_up {
+  from {
+    transform: translate(0, 20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+.header-nav .navbar>ul>li ul.dropdown-sublist {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: auto;
+  margin: 0;
+  display: none;
+  min-width: 200px;
+  background-color: #fff;
+  box-shadow: 0 10px 15px -6px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transform-origin: top;
+  padding: 20px 0 6px;
+  border: 0;
+
+}
+
+.header-nav .navbar>ul>li:hover>ul.dropdown-sublist {
+  display: block;
+  animation: swip_up 0.3s linear 1;
+}
+
+.dropdown-list {
+  position: relative;
+}
+
+/* .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+} */
+.dropdown-sublist li {
+  margin: 0;
+}
+
+.dropdown-sublist li a {
+  margin: 0;
+  color: #222;
+  padding: 0px 25px;
+  margin-bottom: 11px;
+}
+
+.dropdown-list:hover .dropdown-sublist {
+  display: block;
+  margin-top: 0px;
+  animation: fade-down 0.45s linear;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #444;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.responsive-nav {
+  display: none !important;
+}
+
+/*-------------------------------------
+ Mobile nav 
+--------------------------------------*/
+
+/* .mobile-nav{
+  display: none;
+} */
+.nav-close {
+  margin: 30px 30px 30px auto;
+  cursor: pointer;
+}
+
+.nav-close svg {
+  border: 1px solid #fff;
+  color: #fff
+}
+
+.mobile-nav {
+  width: 300px;
+  height: 100vh;
+  left: -300px;
+  position: fixed;
+  top: 0;
+  transition: all .3s ease 0s;
+  /* overflow-x: auto;
+  overflow-y: scroll; */
+  z-index: 9999;
+  box-shadow: 0 10px 40px 0 rgba(255, 255, 255, .1);
+  background-color: #000;
+}
+
+.mobile-nav ul li {
+  display: block;
+}
+
+.mobile-nav ul li a {
+  display: block;
+  color: #fff;
+  padding: 10px 35px;
+  position: relative;
+}
+
+.nav-arrow {
+  position: absolute;
+  right: 32px;
+}
+
+.mobile-nav ul li ul li a {
+  padding: 10px 35px 10px 50px;
+  display: block;
+}
+
+.nav-open {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  right: 34px;
+  top: 0;
+}
+
+.mobile-nav-wrapper.navActive .mobile-nav {
+  left: 0;
+}
+
+.nav-hide {
+  display: none;
+}
+
+.nav-hide.show {
+  display: block;
+}
+
+.dark-shadow.navActive {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  content: '';
+  opacity: .8;
+  transition: .3s
+}
+
+/*-------------------------------------
+ Mobile nav end
+--------------------------------------*/
+
+/* ================================================== slider Part start ==================================================== */
+#slider-section {
+  background: rgba(252, 90, 87, .10);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 778px;
+  padding-top: 145px;
+  padding-bottom: 122px;
+  position: relative;
+  z-index: 1;
+}
+
+
+.slider_content h1 {
+  width: 385px;
+  font-size: 62px;
+  font-weight: 600;
+  font-family: var(--Hind_Siliguri);
+  color: var(--color_secondary);
+}
+
+.slider_content h1 span {
+  font-size: 62px;
+  font-weight: 600;
+  font-family: var(--Hind_Siliguri);
+  color: var(--color_brand);
+}
+
+.buttons {
+  margin-top: 60px;
+  margin-bottom: 36px;
+}
+
+.buttons button {
+  background-color: var(--color_brand);
+  border: none;
+  color: var(--color_primary);
+  font-size: 15px;
+  font-weight: 700;
+  font-family: var(--Hind_Siliguri);
+  width: 178px;
+  height: 45px;
+  padding: 13px 13px;
+  margin-right: 29px;
+  cursor: pointer;
+  border-radius: 7px;
+}
+
+.buttons .outline {
+  background: rgba(252, 90, 87, .15);
+  border: 1px solid var(--color_brand);
+  color: #333333;
+}
+
+.slider_content p {
+  width: 455px;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: var(--Inter);
+  color: var(--color_secondary);
+  margin-bottom: 134px;
+}
+
+.social-icons a {
+  margin-bottom: 46px;
+
+}
+
+.social-icons a[href="Facebook"] {
+  color: #1877F2;
+  font-size: 48px;
+}
+
+.social-icons a[href="Linkedin"] {
+  color: #0A66C2;
+  font-size: 48px;
+  margin-left: 40px;
+}
+
+.social-icons a[href="Twitter"] {
+  color: #1DA1F2;
+  font-size: 48px;
+  margin-left: 40px;
+}
+
+.social-icons a[href="youtube"] {
+  color: #E60019;
+  font-size: 48px;
+  margin-left: 40px;
+}
+
+
+
+.hero-images {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 41px;
+}
+
+.hero-images .badge span {
+  color: var(--color_brand);
+  display: contents;
+
+}
+
+.hero-images .badge-3 span {
+  color: var(--color_brand);
+  display: contents;
+
+}
+
+
+.hero-images .badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 700;
+  font-family: var(--Hind_Siliguri);
+  color: #444444;
+  width: 316px;
+  height: 93px;
+  border-radius: 7px;
+  margin-top: -90px;
+  margin-left: 170px;
+  background: var(--color_primary);
+  text-shadow: 1px 1px 2px #444444;
+  position: absolute;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+
+.hero-images .card-1 {
+  width: 326px;
+  height: 326px;
+  margin-top: 28px;
+}
+
+.hero-images .card-2 {
+  width: 326px;
+  height: 326px;
+  margin-top: -40px;
+}
+
+.hero-images .badge-3 {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 700;
+  font-family: var(--Hind_Siliguri);
+  color: #444444;
+  width: 316px;
+  height: 93px;
+  border-radius: 7px;
+  background: var(--color_primary);
+  text-shadow: 1px 1px 2px #444444;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
+  position: absolute;
+}
+
+.hero-images .badge-3 {
+  position: relative;
+}
+
+.hero-images .card-3 {
+  width: 326px;
+  height: 217px;
+  margin-top: -80px;
+}
+
+/* -------------------------------------------------- slider Part end -------------------------------------------------------- */
+
+/* ================================================== course-section Part start ======================================================= */
+.comon-head h2 {
+  font-size: 41px;
+  font-weight: 700;
+  font-family: var(--Hind_Siliguri);
+  color: var(--color_brand);
+  text-align: center;
+  margin-top: 24px;
+}
+
+.category-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.nav-btn {
+  background: #ff4d4d;
+  border: none;
+  color: white;
+  padding: 0.5rem 0.8rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: var(--Hind_Siliguri);
+}
+
+.category-list {
+  display: flex;
+  gap: 21px;
+  overflow-x: auto;
+}
+
+.category-item {
+  border: 3px solid #ffeaea;
+  background: white;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  width: 399px;
+  height: 109px;
+  margin-top: 41px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.category-item.active {
+  border: 2px solid #ffeaea;
+  background: white;
+}
+
+.category-item .img-content {
+  width: 75px;
+  height: 75px;
+  margin-left: 19px;
+  border-radius: 50%;
+  background-color: #ffeaea;
+}
+
+.category-item .img-content img {
+  width: 39px;
+  height: 35px;
+  text-align: center;
+  display: inline-block;
+  margin: 18px;
+}
+
+.category-item p {
+  font-size: 22px;
+  font-weight: 700;
+  font-family: var(--Hind_Siliguri);
+  color: #000000;
+  margin-left: 21px;
+  margin-bottom: 5px;
+}
+
+.category-item span {
+  font-size: 16px;
+  font-weight: 400;
+  margin-left: 21px;
+  font-family: var(--Hind_Siliguri);
+  color: #000000;
+}
+
+/* .swiper {
+      width: 1403px;
+      height: 300px;
+    } */
+
+/* .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    } */
+/* -------------------------------------------------- course-section Part end -------------------------------------------------------- */
+/* ====================================================popular-section part start ===================================================== */
+#popular-section .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+}
+
+.main-card {
+  width: 267px;
+  height: 325px;
+  margin-top: 36px;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.card-top {
+  background-color: #ffe5e5;
+  text-align: center;
+  width: 267px;
+  height: 252px;
+  border-radius: 7px;
+  position: relative;
+}
+
+.bg-img {
+  position: absolute;
+  width: 264px;
+  height: 165px;
+  top: 65px;
+  left: 0;
+  opacity: 0.15;
+  z-index: 1;
+}
+
+.card-top h2,
+.card-top h4,
+.name-box {
+  position: relative;
+  z-index: 2;
+}
+
+.card-top h2 {
+  margin: 0;
+  top: 25px;
+  right: 23px;
+  font-size: 19px;
+  font-family: var(--Hind_Siliguri);
+  font-weight: 700;
+  color: #333333;
+}
+
+.card-top h4 {
+  font-size: 12px;
+  font-family: var(--Hind_Siliguri);
+  font-weight: 700;
+  top: 28px;
+  margin-right: 73px;
+  color: #444;
+}
+
+.name-box {
+  background: white;
+  display: inline-block;
+  padding: 6px 40px;
+  border-radius: 4px;
+  font-weight: bold;
+  color: #222;
+  margin: 10px 0;
+  margin-left: -22%;
+  margin-top: 32px;
+  font-size: 14px;
+  font-family: var(--Hind_Siliguri);
+  font-weight: 700;
+
+}
+
+.person-img {
+  width: 170px;
+  height: 165px;
+  position: relative;
+  z-index: 2;
+  margin-top: -26px;
+  margin-left: 42%;
+}
+
+.card-bottom {
+  text-align: center;
+  padding-top: 0px;
+}
+
+.price {
+  background-color: #FC5A57;
+  color: white;
+  display: inline-block;
+  padding: 8px 30px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 6px;
+  margin-top: -10px;
+  position: relative;
+  z-index: 2;
+}
+
+.old-price {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #888;
+  text-decoration: line-through;
+  padding: 2px 15px;
+}
+
+.click-icon {
+  position: absolute;
+  bottom: 7px;
+  right: 10px;
+  width: 39px;
+  height: 39px;
+  background-color: #ff6464;
+  border-radius: 50%;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.click-icon img {
+  width: 22px;
+  height: 22px;
+}
+
+/* -------------------------------------------------- popular-section part  end -------------------------------------------------------- */
+/* ====================================================baner-section part start ===================================================== */
+#baner-section {
+  background-image: url(../images/extra\ 1.png);
+  background-color: #FC5A57;
+  /* background-size: cover; */
+  background-repeat: no-repeat;
+  /* background-position: center; */
+  height: 556px;
+  margin-top: 106px;
+  margin-bottom: 72px;
+}
+
+/* .baner img {
+  margin-right: 59%;
+} */
+
+/* -------------------------------------------------- baner-section part  end -------------------------------------------------------- */
+/* ====================================================tandi-section part start ===================================================== */
+/* #tandi-section .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+} */
+
+/* .tandi-card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 38px;
+} */
+.promo-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  border-radius: 7px;
+  width: 300px;
+  height: 274px;
+  margin-top: 36px;
+  position: relative;
+}
+
+.promo-1 {
+  background-image: url('../images/TCourse.png');
+  border-radius: 7px;
+  width: 300px;
+  height: 274px;
+  text-align: center;
+}
+
+.promo-2 {
+  background-image: url('../images/TCourse-1.png');
+  border-radius: 7px;
+  width: 300px;
+  height: 274px;
+  text-align: center;
+}
+
+.promo-card h2 {
+  font-size: 27px;
+  font-weight: 700;
+  font-family: var(--Hind_Siliguri);
+  color: var(--color_primary);
+  margin-top: 28px;
+}
+
+.discount-icon {
+  position: absolute;
+  top: 45px;
+  left: 280px;
+  width: 50px;
+  height: 30px;
+}
+
+.hacker-icon {
+  margin-top: 8px;
+  width: 80px;
+  height: 102px;
+}
+
+.promo-2 .hacker-icon {
+  margin-top: 8px;
+  width: 80px;
+  height: 104px;
+}
+
+.promo-card h3 {
+  font-size: 27px;
+  font-weight: 700;
+  font-family: var(--Hind_Siliguri);
+  color: var(--color_primary);
+  margin-top: 8px;
+}
+
+.btn-price {
+  border: 2px solid #fff;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: var(--Hind_Siliguri);
+  color: #fff;
+  margin-top: 7px;
+  background: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.btn-promo {
+  position: absolute;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: var(--Hind_Siliguri);
+  bottom: -32px;
+  left: 60px;
+  background: #fff;
+  color: #333333;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3)
+}
+
+/* -------------------------------------------------- tandi-section part  end -------------------------------------------------------- */
+/* ================================================== Skillophy Part start ======================================================= */
+
+#Skillophy_benefit {
+  background: url(../images/bag.png) no-repeat center;
+  background-size: cover;
+  height: 575px;
+  margin-top: 80px;
+}
+
+#Skillophy_benefit .row {
+  margin-top: 38px;
+}
+
+.Skillophy_benefit_head h2 {
+  font-size: 40px;
+  font-weight: 600;
+  font-family: var(--Hind_Siliguri);
+  color: #FC5A57;
+  text-align: center;
+  margin-top: 73px;
+  margin-bottom: 38px;
+}
+
+
+.benefit_item {
+  justify-items: center;
+}
+
+.Skillophy_item .item_icon {
+  width: 45px;
+  height: 3px;
+  margin-top: 24px;
+}
+
+.item_text h3 {
+  font-size: 23px;
+  font-weight: 700;
+  text-align: center;
+  font-family: var(--Hind_Siliguri);
+  color: #FC5A57;
+  margin-top: 24px;
+  margin-bottom: 52px;
+}
+
+/* -------------------------------------------------- Skillophy Part end -------------------------------------------------------- */
+/* ================================================== testimonial  Part start ======================================================= */
+#testimonial-section {
+  margin-top: 56px;
+}
+
+.category-card {
+  display: flex;
+  align-items: center;
+  margin-top: 35px;
+  margin-bottom: 148px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.category-card.active {
+  border: 2px solid #ffeaea;
+  background: white;
+}
+
+.testimonial-item {
+  background: #fff;
+  border: 1px solid #ff4d4f;
+  border-radius: 10px;
+  width: 367px;
+  height: 233px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+/* .testimonial-item :hover {
+  animation: var(--animation-fade-in);
+  animation-delay: calc(var(--animation-order) * 75ms);
+} */
+
+.testimonial-item::before {
+  content: '❝';
+  position: absolute;
+  top: -22px;
+  left: 15px;
+  font-size: 24px;
+  font-family: var(--Hind_Siliguri);
+  background: #ff4d4f;
+  color: white;
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.testimonial-item p {
+  font-size: 15px;
+  font-weight: 500;
+  font-family: var(--Hind_Siliguri);
+  margin-top: 30px;
+  color: #000000;
+  line-height: 1.5;
+}
+
+.testimonial-item strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: var(--Hind_Siliguri);
+  margin-top: 27px;
+  color: #000000;
+}
+
+.testimonial-item .small {
+  font-size: 12px;
+  width: 500;
+  font-family: var(--Hind_Siliguri);
+  color: #787878;
+}
+
+/* -------------------------------------------------- testimonial Part end -------------------------------------------------------- */
+/* ================================================== Question Part start ======================================================= */
+
+.Question_image {
+  width: 620px;
+  /* height: 445px; */
+}
+
+.Question_text h1 {
+  margin-top: 16px;
+  width: 355px;
+  font-size: 39px;
+  font-weight: 700;
+  grid-column: 20px;
+  color: #222222;
+  font-family: var(--Hind_Siliguri);
+}
+
+.Question_image h1 samp {
+  color: #FC5A57;
+}
+
+.Question_image p {
+  font-size: 21px;
+  font-weight: 400;
+  color: var(--color_secondary);
+  font-family: var(--Hind_Siliguri);
+  margin-top: 20px;
+}
+
+/* .Question_image {
+  position: relative;
+}
+
+.Question_image img {
+  width: 203px;
+  height: 196px;
+} */
+
+.faq {
+  width: 724px;
+  height: 494px;
+
+}
+
+.faq .accordion-header span {
+  font-size: 34px;
+  font-weight: 500;
+  font-family: var(--Hind_Siliguri);
+  color: var(--color_secondary);
+}
+
+.faq .accordion-body p {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: var(--Hind_Siliguri);
+  color: var(--color_secondary);
+}
+
+#accordionExample .accordion-item {
+  border-top: none;
+  /* border-bottom: none; */
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #FC5A57;
+
+}
+
+#accordionExample .accordion-item .true .golla {
+  color: #fff;
+  background-color: #FC5A57;
+  box-shadow: inset 0 -1px 0 rgba(219, 214, 214, 0.781);
+}
+
+.accordion-button {
+  font-size: 21px;
+  font-weight: 400;
+  font-family: var(--Hind_Siliguri)
+}
+
+/* -------------------------------------------------- Question Part end -------------------------------------------------------- */
+/* ================================================== instructore Part start ======================================================= */
+.instructore {
+  margin-top: 218px;
+  text-align: center;
+}
+
+.hero h2 {
+  margin: 75px 0 20px;
+  color: #000;
+}
+
+.hero p {
+  font-size: 21px;
+  font-weight: 500;
+  font-family: var(--Hind_Siliguri);
+  color: #000000;
+  width: 648px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+.hero button {
+  font-size: 21px;
+  font-weight: 500;
+  font-family: var(--Hind_Siliguri);
+  margin-top: 25px;
+  background: #FF5E5E;
+  color: #fff;
+  padding: 25px 140px;
+  border: none;
+  border-radius: 7px;
+  font-size: 21px;
+  cursor: pointer;
+  transition: transform .2s;
+}
+
+.hero button:hover {
+  transform: scale(1.05);
+}
+
+/* -------------------------------------------------- instructore Part end -------------------------------------------------------- */
+/* ================================================== team Part start ======================================================= */
+#team_section h2 {
+  color: var(--color_secondary);
+  margin-top: 266px;
+  margin-bottom: 66px;
+}
+
+/* -------------------------------------------------- team Part end -------------------------------------------------------- */
+/* ================================================== subscribe Part start ======================================================= */
+.subscribe-area {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  margin-top: 32px;
+}
+
+.subscribe-area h2 {
+  color: var(--color_secondary);
+
+}
+
+.subscribe-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  margin-bottom: 46px;
+}
+
+.subscribe-box {
+  display: flex;
+  width: 632px;
+  height: 80px;
+  border: 1px solid #FC5A57;
+  background-color: #ffffff;
+  border-radius: 71px;
+  padding: 9px;
+}
+
+.subscribe-box input[type="email"] {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: var(--poppins);
+  color: #5E5E5E;
+  margin-left: 18px;
+  padding: 30px 20px;
+  outline: none;
+  flex: 1;
+  border: none;
+}
+
+.subscribe-box input::placeholder {
+  color: #5E5E5E;
+}
+
+.subscribe-box button {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--poppins);
+  width: 242px;
+  height: 58px;
+  margin-left: 11px;
+  border-radius: 71px;
+  background-color: #FC5A57;
+  border: 1px solid var(--color_brand);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* -------------------------------------------------- subscribe Part end -------------------------------------------------------- */
+/* ================================================== location Part start ======================================================= */
+#location-section {
+  background-image: url(../images/location.png);
+  /* background-size: cover; */
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 676px;
+}
+
+/* -------------------------------------------------- location Part end -------------------------------------------------------- */
+
+/* ================================================== Massage Part start ======================================================= */
+
+#Massage {
+  margin-top: -60px;
+  position: relative;
+}
+
+#Massage h2 {
+  font-size: 41px;
+  font-weight: 700;
+  color: var(--color_secondary);
+  margin-top: 40px;
+  font-family: var(--Hind_Siliguri);
+}
+
+#Massage p {
+  width: 388px;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: var(--Hind_Siliguri);
+  color: var(--color_secondary);
+  margin-top: 28px;
+}
+
+#Massage p samp {
+  width: 388px;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: var(--Hind_Siliguri);
+}
+
+.Massage_image ul img {
+  width: 18px;
+  height: 16px;
+}
+
+.Massage_image {
+  position: relative;
+}
+
+.Massage_image ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 26px;
+}
+
+.Massage_image li {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: var(--Hind_Siliguri);
+  color: #333333;
+  margin-bottom: 14px;
+}
+
+.Massage_image img {
+  width: 203px;
+  height: 196px;
+}
+
+.faq {
+  width: 724px;
+  height: 494px;
+
+}
+
+.accordion-button {
+  font-size: 21px;
+  font-weight: 400;
+  font-family: var(--Hind_Siliguri)
+}
+
+.card-footer {
+  width: 233px;
+}
+
+.accordion-item h3 {
+  font-size: 31px;
+  font-weight: 700;
+  font-family: var(--Hind_Siliguri);
+  color: #333333;
+  margin-left: 48px;
+  margin-top: 31px;
+}
+
+.accordion-item .Masaging {
+
+  border-radius: 7px;
+  background-color: #FFFFFF;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+}
+
+.accordion-item .Masaging form {
+  width: 633px;
+  height: 547px;
+  margin-left: 48px;
+  margin-top: 20px;
+}
+
+
+.accordion-item .Masaging label {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 11px;
+  font-family: var(--Hind_Siliguri);
+}
+
+input[type=text],
+select,
+textarea {
+  font-size: 18px;
+  font-weight: 400;
+  font-family: var(--Hind_Siliguri);
+  width: 534px;
+  height: 58px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  box-sizing: border-box;
+  margin-top: 11px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+.accordion-item .Masaging input {
+  display: flex;
+  justify-content: center;
+
+}
+
+input[type=submit] {
+  background-color: #FC5A57;
+  width: 534px;
+  height: 58px;
+  align-items: center;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  margin-top: 22px;
+  cursor: pointer;
+}
+
+/* -------------------------------------------------- Massage Part end -------------------------------------------------------- */
+
+/* ================================================== footer Part start ======================================================= */
+#footer-section {
+  background-color: #FC5A57;
+  height: 591px;
+  padding: 60px 40px;
+  margin-top: 41px;
+}
+
+.footer-brand {
+  margin-top: 170px;
+}
+
+.footer-brand img {
+  width: 255px;
+  height: 70px;
+  vertical-align: middle;
+}
+
+.footer-brand h2 {
+  width: 278px;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: var(--Hind_Siliguri);
+  color: #FFFFFF;
+  margin-top: 19px;
+}
+
+.footer-brand p {
+  width: 368px;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: var(--Hind_Siliguri);
+  color: #FFFFFF;
+  margin-top: 95px;
+}
+
+.footer-brand .social-icons {
+  font-size: 39px;
+  font-weight: 400;
+  margin-top: 10px;
+  font-family: var(--poppins);
+  color: var(--color_primary);
+}
+
+.footer-brand .social-icons i {
+  margin-left: 21px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 74px;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;
+  min-width: 300px;
+  margin-top: 196px;
+}
+
+.footer-links h4 {
+  font-size: 22px;
+  font-weight: 600;
+  font-family: var(--Hind_Siliguri);
+  color: #FFFFFF;
+  margin-bottom: 17px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 14px;
+  font-family: var(--Hind_Siliguri);
+  color: #FFFFFF;
+  /* margin-bottom: 14px; */
+}
+
+
+
+#last-area {
+  background-color: #FFBAB9;
+  height: 68px;
+}
+
+#last-area .row {
+  text-align: center;
+}
+
+#last-area img {
+  width: 118px;
+  height: 31px;
+  margin-top: 18px;
+
+}
+
+
+/* -------------------------------------------------- footer Part end -------------------------------------------------------- */
